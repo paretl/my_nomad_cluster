@@ -1,0 +1,16 @@
+all:
+  children:
+    master:
+      hosts:
+%{ for hostname, server in masters ~}
+        ${hostname}:
+          ansible_host: ${server.host}
+          internal_ip: ${server.internal_ip}
+%{ endfor ~}
+    client:
+      hosts:
+%{ for hostname, server in clients ~}
+        ${hostname}:
+          ansible_host: ${server.host}
+          internal_ip: ${server.internal_ip}
+%{ endfor ~}

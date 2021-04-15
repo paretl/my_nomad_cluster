@@ -1,0 +1,4 @@
+resource "scaleway_account_ssh_key" "main" {
+  name       = "pc_perso"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDR03bQWHclvqOl30PzWw3D+uwqIKNhekCx8OcoTrRvtfjl9IDU+gkjTUKFeacvmvpul8iCDKimKfC/h7PtYnwUsYUmYHIN9a6sLvhLbOOIx1xWDITus4OKdWu04kxrB5JWXQ4kF+7berwAWjEBrLFErM5D3cKnzDCCPvFwe8T6VIy/wjnWP+0k5ATU6oU4Gm6DQo4hQeCSRh0JnFsCBfBC5SNElDtXKtPBux13OGkEr2SlSr8HoVFuSljYlLP3LIi8Bt5vqJQtLAf9x31o/BptbEwUuAItq7OLM0duL4DTO9JVK5ZmfDUK+UzyEKVH5ViVmyKPKME0czzIhbrYOqnUs29VBH9/r8NIukj87wlIoZ38FQrLIAOZIR1C46l5tnEbGd+3yXVVl9iUmysLFRzu1zVpegR+awv8bO46/hvO7OcEy4JvIseF8Dvtjc19Vl+bJta1TouGrB9HnlF0bNGf9A+jwrpq9ceo9UN135aBihBbCObjYBnjQ0GwLAOrzLE= lparet@pcperso"
+}
