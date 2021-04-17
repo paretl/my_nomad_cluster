@@ -23,9 +23,16 @@ resource "scaleway_instance_security_group" "master" {
     ip     = "109.26.56.8"
   }
 
+  # Consul UI
   inbound_rule {
     action = "accept"
     port   = "8500"
+  }
+
+  # Nomad UI
+  inbound_rule {
+    action = "accept"
+    port   = "4646"
   }
 
   inbound_rule {

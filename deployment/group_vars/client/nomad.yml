@@ -1,0 +1,8 @@
+---
+
+# Node role
+nomad_node_role: client
+# Node group
+nomad_group_name: client
+# IP used
+nomad_bind_address:  "{{ internal_ip }}"

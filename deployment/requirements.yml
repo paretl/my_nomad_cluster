@@ -4,3 +4,8 @@
   name: consul
   scm: git
   version: master
+
+- src: https://github.com/ansible-community/ansible-nomad.git
+  name: nomad
+  scm: git
+  version: master
