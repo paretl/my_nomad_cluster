@@ -1,0 +1,12 @@
+---
+
+# Node role
+consul_node_role: client
+# Group name
+consul_group_name: client
+# Disable UI
+consul_ui: false
+# Private IP
+consul_bind_address: "{{ internal_ip }}"
+# Master IPs
+consul_join: "{{ groups['master'] | map('extract', hostvars, 'internal_ip') | list }}"

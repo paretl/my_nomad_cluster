@@ -1,0 +1,10 @@
+---
+
+# Consul version
+consul_version: 1.9.4
+# Disable encryption
+consul_encrypt_enable: false
+# Datacenter name
+consul_datacenter: fr1
+# Enable Consul connect
+consul_connect_enabled: true

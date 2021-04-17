@@ -1,0 +1,6 @@
+---
+
+- hosts: master, client
+  become: True
+  roles:
+    - { role: consul, tags: [ consul ] }
