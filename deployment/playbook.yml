@@ -4,3 +4,4 @@
   become: True
   roles:
     - { role: consul, tags: [ consul ] }
+    - { role: nomad, tags: [ nomad ] }

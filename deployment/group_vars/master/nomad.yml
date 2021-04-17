@@ -1,0 +1,10 @@
+---
+
+# Node role
+nomad_node_role: server
+# Group name
+nomad_group_name: master
+# Client address, necessary to enable UI
+nomad_bind_address: 0.0.0.0
+# IP used
+nomad_advertise_address: "{{ internal_ip }}"

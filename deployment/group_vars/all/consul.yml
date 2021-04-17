@@ -5,6 +5,10 @@ consul_version: 1.9.4
 # Disable encryption
 consul_encrypt_enable: false
 # Datacenter name
-consul_datacenter: fr1
+consul_datacenter: "{{ datacenter }}"
 # Enable Consul connect
 consul_connect_enabled: true
+# Add bootstrap expected number
+consul_bootstrap_expect: true
+# Expect number of master
+consul_bootstrap_expect_value: 1
