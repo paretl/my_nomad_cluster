@@ -3,3 +3,4 @@
 # Terraform
 .terraform.lock.hcl
 .terraform
+.terraform.d

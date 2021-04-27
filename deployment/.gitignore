@@ -1,4 +1,8 @@
-# Copied inventory
-inventory.yaml
-# Downloaded roles
-roles/**
+
+# Terraform
+.terraform.lock.hcl
+.terraform
+.terraform.d
+
+# Nomad IP
+nomad_ip.auto.tfvars

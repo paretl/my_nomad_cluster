@@ -6,3 +6,6 @@ nomad_node_role: client
 nomad_group_name: client
 # IP used
 nomad_bind_address:  "{{ internal_ip }}"
+# Consul IP
+nomad_use_consul: True
+nomad_consul_address: "{{ internal_ip }}:8500"

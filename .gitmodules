@@ -1,0 +1,4 @@
+[submodule "bash-methods"]
+	path = bash-methods
+	url = https://github.com/DataDome/bash-methods.git
+	branch = master

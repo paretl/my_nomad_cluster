@@ -1,0 +1,19 @@
+---
+# Use Consul with Nomad
+nomad_use_consul: true
+# Nomad version
+nomad_version: 1.0.4
+# Datacenter
+nomad_datacenter: "{{ datacenter }}"
+# Enable Docker usage
+nomad_docker_enable: true
+# Number of master expected
+nomad_bootstrap_expect: 1
+
+# Telemetry
+nomad_telemetry: true
+nomad_telemetry_collection_interval: "10s"
+nomad_telemetry_disable_hostname: true
+nomad_telemetry_prometheus_metrics: true
+nomad_telemetry_publish_node_metrics: true
+nomad_telemetry_publish_allocation_metrics: true

@@ -16,14 +16,11 @@ BASH_METHODS_PATH="${ROOTDIR}/bash-methods"
 SCRIPT_PARAMS_VARIABLES=(STEP)
 SCRIPT_PARAMS_USAGE='<step ex.init|plan|apply>'
 source "${BASH_METHODS_PATH}"/components/check-bash-parameters.sh
+# Source .env file
+source "${BASH_METHODS_PATH}"/env-file/source-dot-env-file.sh
 
 # Get env variables
 source "${ROOTDIR}"/version.sh
-
-cd ${ROOTDIR}/infrastructure
-export NOMAD_IP=$(terraform output -raw nomad_ip)
-printf 'The Nomad IP is %s.\n' "$NOMAD_IP"
-cd "${BASEDIR}"
 
 # Define parameters for each command
 export TF_CLI_ARGS_init="-upgrade -reconfigure"

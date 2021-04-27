@@ -12,3 +12,8 @@ consul_connect_enabled: true
 consul_bootstrap_expect: true
 # Expect number of master
 consul_bootstrap_expect_value: 1
+
+# Enable telemetry
+consul_config_custom:
+  telemetry:
+    prometheus_retention_time: 10s
