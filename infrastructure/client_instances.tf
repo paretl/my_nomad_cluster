@@ -1,10 +1,10 @@
 
 resource "scaleway_instance_server" "nomad_consul_client" {
-  count = 1
+  count = var.client_number
 
   type  = "DEV1-S"
   image = "centos_8"
-  name  = "nomad_consul_client_${count.index}"
+  name  = "nomad_consul_client_${count.index+1}"
 
   # Public IP
   ip_id = scaleway_instance_ip.nomad_consul_client_ip[count.index].id
@@ -14,7 +14,7 @@ resource "scaleway_instance_server" "nomad_consul_client" {
 }
 
 resource "scaleway_instance_ip" "nomad_consul_client_ip" {
-  count = 1
+  count = var.client_number
 }
 
 
@@ -26,6 +26,18 @@ resource "scaleway_instance_security_group" "client" {
     action = "accept"
     port   = "22"
     ip     = "109.26.56.8"
+  }
+
+# Fabio port
+  inbound_rule {
+    action = "accept"
+    port   = "9998"
+  }
+
+# Fabio port
+  inbound_rule {
+    action = "accept"
+    port   = "9999"
   }
 
   inbound_rule {
@@ -46,7 +58,7 @@ resource "scaleway_instance_security_group" "client" {
 }
 
 resource "scaleway_instance_private_nic" "client" {
-  count = 1
+  count = var.client_number
 
   server_id          = scaleway_instance_server.nomad_consul_client[count.index].id
   private_network_id = scaleway_vpc_private_network.private.id

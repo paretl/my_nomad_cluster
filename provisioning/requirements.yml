@@ -9,3 +9,8 @@
   name: nomad
   scm: git
   version: master
+
+- src: https://github.com/geerlingguy/ansible-role-docker.git
+  name: docker
+  scm: git
+  version: master

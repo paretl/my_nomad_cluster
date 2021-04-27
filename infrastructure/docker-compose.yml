@@ -23,7 +23,11 @@ services:
       TF_CLI_ARGS_init: ${TF_CLI_ARGS_init}
       TF_CLI_ARGS_apply: ${TF_CLI_ARGS_apply}
 
-      TF_VAR_nomad_ip: ${NOMAD_IP}
+      # Scaleway credentials
+      SCW_ACCESS_KEY: ${SCW_ACCESS_KEY}
+      SCW_SECRET_KEY: ${SCW_SECRET_KEY}
+      SCW_DEFAULT_PROJECT_ID: ${SCW_DEFAULT_PROJECT_ID}
+      SCW_DEFAULT_ORGANIZATION_ID: ${SCW_DEFAULT_ORGANIZATION_ID}
 
     # Overwrite 'terraform' entrypoint by nothing
     entrypoint: ''

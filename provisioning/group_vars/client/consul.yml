@@ -8,5 +8,6 @@ consul_group_name: client
 consul_ui: false
 # Private IP
 consul_bind_address: "{{ internal_ip }}"
+consul_client_address: "{{ internal_ip }}"
 # Master IPs
 consul_join: "{{ groups['master'] | map('extract', hostvars, 'internal_ip') | list }}"

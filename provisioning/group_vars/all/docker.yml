@@ -1,0 +1,7 @@
+---
+# Group variables for docker role
+
+docker_edition: 'ce'
+docker_package: "docker-{{ docker_edition }}-20.10.6"
+
+docker_install_compose: False

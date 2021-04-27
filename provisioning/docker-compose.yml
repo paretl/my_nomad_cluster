@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  ansible:
+    image: lparet/docker-image-ansible:${ANSIBLE_VERSION}
+    working_dir: /provisioning
+    # Enable color of Ansible
+    tty: true
+    volumes:
+      - ./:/provisioning
+      - ${SSH_AUTH_SOCK}:/ssh-agent
+    environment:
+      # Path of the SSH socket
+      SSH_AUTH_SOCK: /ssh-agent
+
+      # Options passed by the parent bash script
+      ANSIBLE_OPTIONS: ${ANSIBLE_OPTIONS}
+    # Define the new command to be more flexible
+    command: sh -c "/provisioning/docker/start.sh"

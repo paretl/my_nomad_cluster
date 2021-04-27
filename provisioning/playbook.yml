@@ -5,3 +5,8 @@
   roles:
     - { role: consul, tags: [ consul ] }
     - { role: nomad, tags: [ nomad ] }
+
+- hosts: client
+  become: True
+  roles:
+    - { role: docker, tags: [ docker ] }
